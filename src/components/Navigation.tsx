@@ -18,7 +18,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="text-2xl font-display font-bold gradient-text cursor-pointer">
-            AI AdAgency
+            ZACKPOT CREATIVES
           </div>
 
           {/* Desktop Navigation */}
