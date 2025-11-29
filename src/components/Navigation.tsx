@@ -19,7 +19,11 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="cursor-pointer">
-            <img src={logo} alt="ZAKPOT CREATIVES" className="h-12 w-auto" />
+            <img 
+              src={logo} 
+              alt="ZAKPOT CREATIVES" 
+              className="h-12 w-auto transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_20px_rgba(220,38,38,0.6)]" 
+            />
           </div>
 
           {/* Desktop Navigation */}
