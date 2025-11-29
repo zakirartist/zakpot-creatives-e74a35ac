@@ -3,15 +3,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 export const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Form submission logic would go here
   };
-
-  return (
-    <section className="py-24 px-4 relative" id="contact">
+  return <section className="py-24 px-4 relative" id="contact">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-display font-bold">
@@ -30,21 +27,13 @@ export const Contact = () => {
                   <label htmlFor="firstName" className="text-sm font-medium">
                     First Name
                   </label>
-                  <Input
-                    id="firstName"
-                    placeholder="John"
-                    className="bg-background/50 border-border/50"
-                  />
+                  <Input id="firstName" placeholder="John" className="bg-background/50 border-border/50" />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="lastName" className="text-sm font-medium">
                     Last Name
                   </label>
-                  <Input
-                    id="lastName"
-                    placeholder="Doe"
-                    className="bg-background/50 border-border/50"
-                  />
+                  <Input id="lastName" placeholder="Doe" className="bg-background/50 border-border/50" />
                 </div>
               </div>
 
@@ -52,42 +41,24 @@ export const Contact = () => {
                 <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="john@company.com"
-                  className="bg-background/50 border-border/50"
-                />
+                <Input id="email" type="email" placeholder="john@company.com" className="bg-background/50 border-border/50" />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="company" className="text-sm font-medium">
                   Company
                 </label>
-                <Input
-                  id="company"
-                  placeholder="Your Company"
-                  className="bg-background/50 border-border/50"
-                />
+                <Input id="company" placeholder="Your Company" className="bg-background/50 border-border/50" />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
                   Message
                 </label>
-                <Textarea
-                  id="message"
-                  placeholder="Tell us about your project..."
-                  rows={5}
-                  className="bg-background/50 border-border/50 resize-none"
-                />
+                <Textarea id="message" placeholder="Tell us about your project..." rows={5} className="bg-background/50 border-border/50 resize-none" />
               </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300"
-              >
+              <Button type="submit" size="lg" className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300">
                 Send Message
               </Button>
             </form>
@@ -101,8 +72,10 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">hello@aiadagency.com</p>
-                  <p className="text-muted-foreground">support@aiadagency.com</p>
+                  <p className="text-muted-foreground">zakirhossain7770@gmail.com
+zakpotcreatives@gmail.com</p>
+                  <p className="text-muted-foreground">
+                </p>
                 </div>
               </div>
             </Card>
@@ -114,8 +87,8 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                  <p className="text-sm text-muted-foreground mt-1">Mon-Fri 9am-6pm EST</p>
+                  <p className="text-muted-foreground">+88 01685 646 148 | +88 01931 777 075</p>
+                  <p className="text-sm text-muted-foreground mt-1">Sat-Thu 9am-8pm (UTC+6)</p>
                 </div>
               </div>
             </Card>
@@ -127,14 +100,13 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Innovation Drive</p>
-                  <p className="text-muted-foreground">San Francisco, CA 94102</p>
+                  <p className="text-muted-foreground">75 no, Sultangonj, West Dhanmondi, Dhaka-1209</p>
+                  <p className="text-muted-foreground">Dhaka, Bangladesh</p>
                 </div>
               </div>
             </Card>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };

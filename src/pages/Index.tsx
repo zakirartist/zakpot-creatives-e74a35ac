@@ -7,10 +7,8 @@ import Portfolio from "@/components/Portfolio";
 import Reviews from "@/components/Reviews";
 import { Contact } from "@/components/Contact";
 import AnimatedBackground from "@/components/AnimatedBackground";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen relative">
+  return <div className="min-h-screen relative">
       <AnimatedBackground />
       <Navigation />
       <main className="relative z-10">
@@ -24,11 +22,9 @@ const Index = () => {
       </main>
       <footer className="py-8 px-4 border-t border-border/50 bg-background/50 backdrop-blur-sm">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>&copy; 2024 AI AdAgency. All rights reserved.</p>
+          <p>© 2025 ZAKPOT CREATIVES. All rights reserved.</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
