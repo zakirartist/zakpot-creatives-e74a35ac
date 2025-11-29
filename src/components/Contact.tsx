@@ -101,7 +101,8 @@ zakpotcreatives@gmail.com</p>
                 <div>
                   <h3 className="font-bold mb-1">Visit Us</h3>
                   <p className="text-muted-foreground">75 no, Sultangonj, West Dhanmondi, Dhaka-1209</p>
-                  <p className="text-muted-foreground">Dhaka, Bangladesh</p>
+                  <p className="text-muted-foreground">zakirhossain7770@gmail.com
+zakpotcreatives@gmail.com</p>
                 </div>
               </div>
             </Card>
