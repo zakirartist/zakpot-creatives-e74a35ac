@@ -66,14 +66,14 @@ export const Contact = () => {
 
           <div className="space-y-6 animate-slide-up animate-delay-100">
             <Card className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-colors">
-              <div className="flex items-start gap-4">
+              <div className="gap-4 flex-row flex items-center justify-start">
                 <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1">Email Us</h3>
+                  <h3 className="font-bold mb-1">Email Us At</h3>
                   <p className="text-muted-foreground">zakirhossain7770@gmail.com
-zakpotcreatives@gmail.com</p>
+                </p>
                   <p className="text-muted-foreground">
                 </p>
                 </div>
