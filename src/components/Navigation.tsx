@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/zakpot-logo.png";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +18,8 @@ export const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-display font-bold gradient-text cursor-pointer">
-            ZAKPOT CREATIVES
+          <div className="cursor-pointer">
+            <img src={logo} alt="ZAKPOT CREATIVES" className="h-12 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
