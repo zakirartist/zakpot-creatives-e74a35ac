@@ -29,7 +29,7 @@ All colors MUST be HSL.
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 0 100% 50%;
+    --accent: 0 84% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 72% 50%;
@@ -41,6 +41,7 @@ All colors MUST be HSL.
 
     --radius: 1.5rem;
 
+    --gradient-background: linear-gradient(135deg, hsl(0 84% 60% / 0.1) 0%, hsl(0 0% 5%) 50%, hsl(0 84% 60% / 0.1) 100%);
     --gradient-primary: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 0% 0%));
     --gradient-accent: linear-gradient(135deg, hsl(0 100% 50%), hsl(0 84% 40%));
     --gradient-mesh: radial-gradient(at 0% 0%, hsl(0 84% 60% / 0.3) 0px, transparent 50%),
@@ -156,7 +157,9 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply text-foreground font-sans antialiased;
+    background: linear-gradient(135deg, hsl(0 84% 60% / 0.15) 0%, hsl(0 0% 5%) 50%, hsl(0 84% 60% / 0.15) 100%);
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
