@@ -73,7 +73,7 @@ export const Contact = () => {
                 <div>
                   <h3 className="font-bold mb-1">Email Us At</h3>
                   <p className="text-muted-foreground">zakirhossain7770@gmail.com
-                </p>
+zakpotcreatives@gmail.com</p>
                   <p className="text-muted-foreground">
                 </p>
                 </div>
