@@ -6,12 +6,14 @@ import Customers from "@/components/Customers";
 import Portfolio from "@/components/Portfolio";
 import Reviews from "@/components/Reviews";
 import { Contact } from "@/components/Contact";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <AnimatedBackground />
       <Navigation />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Services />
         <About />
