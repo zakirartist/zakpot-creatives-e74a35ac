@@ -14,37 +14,43 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    const firstName = formData.get("firstName") as string;
-    const lastName = formData.get("lastName") as string;
-    const email = formData.get("email") as string;
-    const company = formData.get("company") as string;
-    const message = formData.get("message") as string;
+    const form = e.currentTarget as HTMLFormElement | null;
+    const formData = new FormData(form ?? undefined);
+    const firstName = (formData.get("firstName") as string) ?? "";
+    const lastName = (formData.get("lastName") as string) ?? "";
+    const email = (formData.get("email") as string) ?? "";
+    const company = (formData.get("company") as string) ?? "";
+    const message = (formData.get("message") as string) ?? "";
 
     try {
       const { data, error } = await supabase.functions.invoke("send-contact-email", {
         body: {
-          name: `${firstName} ${lastName}`,
+          name: `${firstName} ${lastName}`.trim(),
           email,
           company,
           message,
         },
       });
 
-      if (error) throw error;
+      console.log("send-contact-email response:", { data, error });
+
+      if (error) {
+        throw error;
+      }
 
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
       });
 
-      form.reset();
+      if (form && typeof form.reset === "function") {
+        form.reset();
+      }
     } catch (error) {
       console.error("Error sending message:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description: "Failed to send message. Please try again later.",
         variant: "destructive",
       });
     } finally {
