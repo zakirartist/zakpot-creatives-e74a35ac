@@ -3,10 +3,52 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 export const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Form submission logic would go here
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get("firstName") as string;
+    const lastName = formData.get("lastName") as string;
+    const email = formData.get("email") as string;
+    const company = formData.get("company") as string;
+    const message = formData.get("message") as string;
+
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: `${firstName} ${lastName}`,
+          email,
+          company,
+          message,
+        },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return <section className="py-24 px-4 relative" id="contact">
       <div className="container mx-auto max-w-7xl">
@@ -27,13 +69,13 @@ export const Contact = () => {
                   <label htmlFor="firstName" className="text-sm font-medium">
                     First Name
                   </label>
-                  <Input id="firstName" placeholder="John" className="bg-background/50 border-border/50" />
+                  <Input id="firstName" name="firstName" placeholder="John" className="bg-background/50 border-border/50" required />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="lastName" className="text-sm font-medium">
                     Last Name
                   </label>
-                  <Input id="lastName" placeholder="Doe" className="bg-background/50 border-border/50" />
+                  <Input id="lastName" name="lastName" placeholder="Doe" className="bg-background/50 border-border/50" required />
                 </div>
               </div>
 
@@ -41,25 +83,25 @@ export const Contact = () => {
                 <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
-                <Input id="email" type="email" placeholder="john@company.com" className="bg-background/50 border-border/50" />
+                <Input id="email" name="email" type="email" placeholder="john@company.com" className="bg-background/50 border-border/50" required />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="company" className="text-sm font-medium">
                   Company
                 </label>
-                <Input id="company" placeholder="Your Company" className="bg-background/50 border-border/50" />
+                <Input id="company" name="company" placeholder="Your Company" className="bg-background/50 border-border/50" required />
               </div>
 
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
                   Message
                 </label>
-                <Textarea id="message" placeholder="Tell us about your project..." rows={5} className="bg-background/50 border-border/50 resize-none" />
+                <Textarea id="message" name="message" placeholder="Tell us about your project..." rows={5} className="bg-background/50 border-border/50 resize-none" required />
               </div>
 
-              <Button type="submit" size="lg" className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300">
-                Send Message
+              <Button type="submit" size="lg" className="w-full bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </Card>
