@@ -14,7 +14,8 @@ export const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const firstName = formData.get("firstName") as string;
     const lastName = formData.get("lastName") as string;
     const email = formData.get("email") as string;
@@ -38,7 +39,7 @@ export const Contact = () => {
         description: "We'll get back to you as soon as possible.",
       });
 
-      e.currentTarget.reset();
+      form.reset();
     } catch (error) {
       console.error("Error sending message:", error);
       toast({
