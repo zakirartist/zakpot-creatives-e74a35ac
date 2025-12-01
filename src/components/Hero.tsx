@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -23,13 +24,19 @@ export const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4 animate-slide-up animate-delay-300">
-            <Button size="lg" className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 group">
+            <Button 
+              size="lg" 
+              className="bg-gradient-primary text-primary-foreground hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 group"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 hover:border-primary text-lg px-8 py-6">
-              View Case Studies
-            </Button>
+            <Link to="/portfolio">
+              <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 hover:border-primary text-lg px-8 py-6">
+                View Case Studies
+              </Button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 animate-fade-in animate-delay-300">

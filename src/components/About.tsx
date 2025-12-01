@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const benefits = [
   "Real-time campaign optimization using machine learning",
@@ -41,9 +42,11 @@ export const About = () => {
               ))}
             </div>
             
-            <Button size="lg" className="bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-300 mt-6">
-              Learn More About Our Process
-            </Button>
+            <Link to="/process">
+              <Button size="lg" className="bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-300 mt-6">
+                Learn More About Our Process
+              </Button>
+            </Link>
           </div>
           
           <div className="relative animate-fade-in animate-delay-200">
