@@ -72,7 +72,7 @@ const Customers = () => {
 
         <div className="text-center mt-12">
           <p className="text-muted-foreground">
-            Want to join our growing list of satisfied clients?{" "}
+            Don't miss the chance to be our next valuable client.{" "}
             <a href="#contact" className="text-primary hover:underline font-semibold">
               Get in touch
             </a>
