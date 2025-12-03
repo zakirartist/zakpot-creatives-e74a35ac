@@ -34,17 +34,16 @@ export const About = () => {
           </div>
           
           <div className="relative animate-fade-in animate-delay-200">
-            <div className="aspect-square rounded-2xl bg-gradient-primary p-1 shadow-elevated">
-              <div className="w-full h-full bg-card rounded-xl flex items-center justify-center">
-                <div className="text-center space-y-4 p-8">
-                  <div className="text-6xl font-display font-bold gradient-text">
-                    3.5x
-                  </div>
-                  <p className="text-xl text-muted-foreground">
-                    Average Campaign Performance Improvement
-                  </p>
-                </div>
-              </div>
+            <div className="aspect-square rounded-2xl bg-gradient-primary p-1 shadow-elevated overflow-hidden">
+              <video 
+                className="w-full h-full object-cover rounded-xl"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+              >
+                <source src="/assets/performance-graph.mp4" type="video/mp4" />
+              </video>
             </div>
             
             <div className="absolute -bottom-6 -right-6 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10"></div>
