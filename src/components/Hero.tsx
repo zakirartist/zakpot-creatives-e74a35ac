@@ -7,16 +7,16 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-4 animate-slide-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-4 opacity-0 animate-slide-up">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">Advanced AI-Powered Advertising Solutions</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight animate-slide-up animate-delay-100 text-center lg:text-7xl">
+          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight opacity-0 animate-slide-up animate-delay-100 text-center lg:text-7xl">
             Transform Your Brand with{" "}
-            <span className="gradient-text text-7xl">
-Intelligent Tailored
-Advertising Campaign</span>
+            <span className="gradient-text">
+              Intelligent Tailored Advertising Campaign
+            </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed animate-slide-up animate-delay-200">Harness the power of artificial intelligence to create, optimize, and scale advertising campaigns that deliver desired results.</p>
