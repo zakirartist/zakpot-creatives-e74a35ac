@@ -37,8 +37,8 @@ Advertising Campaign</span>
             {[{
             value: "125%",
             label: "Avg ROI Increase"
-          }, {
-            value: "48hrs",
+}, {
+            value: "33hrs",
             label: "Campaign Launch"
           }, {
             value: "10M+",
