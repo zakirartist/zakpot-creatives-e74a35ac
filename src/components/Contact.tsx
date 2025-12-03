@@ -7,42 +7,43 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 export const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     const form = e.currentTarget as HTMLFormElement | null;
     const formData = new FormData(form ?? undefined);
-    const firstName = (formData.get("firstName") as string) ?? "";
-    const lastName = (formData.get("lastName") as string) ?? "";
-    const email = (formData.get("email") as string) ?? "";
-    const company = (formData.get("company") as string) ?? "";
-    const message = (formData.get("message") as string) ?? "";
-
+    const firstName = formData.get("firstName") as string ?? "";
+    const lastName = formData.get("lastName") as string ?? "";
+    const email = formData.get("email") as string ?? "";
+    const company = formData.get("company") as string ?? "";
+    const message = formData.get("message") as string ?? "";
     try {
-      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+      const {
+        data,
+        error
+      } = await supabase.functions.invoke("send-contact-email", {
         body: {
           name: `${firstName} ${lastName}`.trim(),
           email,
           company,
-          message,
-        },
+          message
+        }
       });
-
-      console.log("send-contact-email response:", { data, error });
-
+      console.log("send-contact-email response:", {
+        data,
+        error
+      });
       if (error) {
         throw error;
       }
-
       toast({
         title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+        description: "We'll get back to you as soon as possible."
       });
-
       if (form && typeof form.reset === "function") {
         form.reset();
       }
@@ -51,7 +52,7 @@ export const Contact = () => {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
-        variant: "destructive",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
@@ -121,7 +122,8 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Email Us At</h3>
-                  <p className="text-muted-foreground">zakirhossain7770@gmail.com | zakpotcreatives@gmail.com</p>
+                  <p className="text-muted-foreground">zakpotcreatives@gmail.com
+zakirhossain7770@gmail.com   </p>
                   <p className="text-muted-foreground">
                 </p>
                 </div>
@@ -148,9 +150,9 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-1">Visit Us</h3>
-                  <p className="text-muted-foreground">75 no, Sultangonj, West Dhanmondi, Dhaka-1209</p>
-                  <p className="text-muted-foreground">zakirhossain7770@gmail.com
-zakpotcreatives@gmail.com</p>
+                  <p className="text-muted-foreground">75 no, Sultangonj, West Dhanmondi,
+Dhaka-1209</p>
+                  <p className="text-muted-foreground">​</p>
                 </div>
               </div>
             </Card>
