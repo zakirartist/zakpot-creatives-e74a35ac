@@ -40,8 +40,8 @@ Advertising Campaign</span>
 }, {
             value: "33hrs",
             label: "Campaign Launch"
-          }, {
-            value: "10M+",
+}, {
+            value: "4M+",
             label: "Ad Impressions"
           }, {
             value: "99%",
