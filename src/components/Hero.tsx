@@ -12,7 +12,7 @@ export const Hero = () => {
             <span className="text-sm font-medium text-primary">Advanced AI-Powered Advertising Solutions</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight animate-slide-up animate-delay-100 text-center lg:text-7xl">
+          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight animate-slide-up animate-delay-100 text-center lg:text-5xl">
             Transform Your Brand with{" "}
             <span className="gradient-text">
 Intelligent Tailored
