@@ -12,7 +12,7 @@ export const Hero = () => {
             <span className="text-sm font-medium text-primary">Advanced AI-Powered Advertising Solutions</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight animate-slide-up animate-delay-100 text-center lg:text-9xl">
+          <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight animate-slide-up animate-delay-100 text-center lg:text-7xl">
             Transform Your Brand with{" "}
             <span className="gradient-text">
 Intelligent Tailored
@@ -37,13 +37,13 @@ Advertising Campaign</span>
             {[{
             value: "125%",
             label: "Avg ROI Increase"
-}, {
+          }, {
             value: "33hrs",
             label: "Campaign Launch"
-}, {
+          }, {
             value: "4M+",
             label: "Ad Impressions"
-}, {
+          }, {
             value: "97%",
             label: "Client Satisfaction"
           }].map(stat => <div key={stat.label} className="space-y-2">
