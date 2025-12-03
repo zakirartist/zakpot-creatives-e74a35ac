@@ -35,7 +35,7 @@ Advertising Campaign</span>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 animate-fade-in animate-delay-300">
             {[{
-            value: "250%",
+            value: "125",
             label: "Avg ROI Increase"
           }, {
             value: "48hrs",
