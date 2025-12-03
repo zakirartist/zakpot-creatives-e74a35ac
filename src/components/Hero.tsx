@@ -14,7 +14,7 @@ export const Hero = () => {
           
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight animate-slide-up animate-delay-100 text-center lg:text-7xl">
             Transform Your Brand with{" "}
-            <span className="gradient-text">
+            <span className="gradient-text text-7xl">
 Intelligent Tailored
 Advertising Campaign</span>
           </h1>
