@@ -43,8 +43,8 @@ Advertising Campaign</span>
 }, {
             value: "4M+",
             label: "Ad Impressions"
-          }, {
-            value: "99%",
+}, {
+            value: "97%",
             label: "Client Satisfaction"
           }].map(stat => <div key={stat.label} className="space-y-2">
                 <div className="text-3xl md:text-4xl font-bold gradient-text font-display">
