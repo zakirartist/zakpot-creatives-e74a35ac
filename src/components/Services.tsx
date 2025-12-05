@@ -29,7 +29,7 @@ export const Services = () => {
   return <section className="py-24 px-4 relative" id="services">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-display font-bold"> AI-Powered Digital Marketing SolutionsA I-Powered Digital Marketing Solutions<span className="gradient-text">AI-Powered Digital Marketing Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-display font-bold"> AI-Powered Digital Marketing Solutions AI-Powered Digital Marketing Solutions<span className="gradient-text">AI-Powered Digital Marketing Solutions</span>
           </h2>
           <p className="text-xl text-muted-foreground">A harmonized blend of artificial inteligence, Creative team & marketings experts for your got to promotional services</p>
         </div>
